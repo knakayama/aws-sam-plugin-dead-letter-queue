@@ -1,0 +1,3 @@
+.sam/
+example/params/*
+!example/params/param.sample.json
