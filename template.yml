@@ -32,7 +32,7 @@ LambdaDeadLetterQueue:
                         FunctionName=function_name,
                         DeadLetterConfig={'TargetArn': target_arn})
             except ClientError as e:
-                print(e)
+                print(e['Error']['Message'])
                 cfnresponse.send(event, context, cfnresponse.FAILED, {})
             else:
                 print(resp)
